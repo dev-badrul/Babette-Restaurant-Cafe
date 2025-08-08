@@ -1,0 +1,264 @@
+/*--------------------
+    Sidebar
+----------------------*/
+.widget {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .widget__title {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        margin-bottom: 27px;
+    }
+}
+
+.widget-search {
+    .widget__form-search {
+        position: relative;
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 0;
+            color: $color-theme;
+        }
+    }
+}
+
+.widget-about img {
+    margin-bottom: 26px;
+}
+
+.widget-about p {
+    margin-bottom: 11px;
+}
+
+.widget-about .btn__link {
+    line-height: 1;
+    width: auto;
+    height: auto;
+    border: none;
+    color: $color-theme;
+
+    &:hover {
+        color: $color-dark;
+    }
+}
+
+.widget-categories li {
+    a {
+        display: block;
+        color: #333333;
+        padding: 10px 0;
+        border-bottom: 1px solid #dbdbdb;
+
+        &:hover {
+            color: $color-theme;
+        }
+    }
+
+    &:last-child a {
+        border-bottom: 0;
+    }
+}
+
+.widget-tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    li a {
+        display: block;
+        font-size: 14px;
+        color: $color-body;
+        line-height: 1;
+        text-transform: capitalize;
+        padding: 7px 9px;
+        border: 1px solid #ededed;
+        margin: 0 10px 10px 0;
+        @include prefix(transition, all .4s ease, webkit moz ms o);
+
+        &:hover {
+            background-color: $color-theme;
+            border-color: $color-theme;
+            color: $color-white;
+        }
+    }
+}
+
+/*widget products*/
+.widget-poducts .widget-product-item {
+    display: flex;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .widget__product-title {
+        font-size: 14px;
+        line-height: 23px;
+        margin-bottom: 0;
+
+        a {
+            color: $color-dark;
+        }
+    }
+
+    &:hover .widget__product-title a {
+        color: $color-theme;
+    }
+
+    .widget__product-img {
+        margin-right: 20px;
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 5px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .widget__product-price {
+        font-family: $font-primary;
+        font-size: 13px;
+        font-weight: 600;
+        color: $color-theme;
+    }
+}
+
+/*widget posts*/
+.widget-posts .widget-post-item {
+    margin-bottom: 28px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .widget__post-title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 23px;
+        margin-bottom: 0;
+
+        a {
+            color: $color-dark;
+        }
+    }
+
+    &:hover .widget__post-title a {
+        color: $color-theme;
+    }
+
+    .widget__post-img {
+        margin-bottom: 17px;
+    }
+
+    .widget__post-date {
+        line-height: 1;
+        font-size: 13px;
+        display: block;
+        margin-bottom: 6px;
+    }
+}
+
+.sidebar-layou2 {
+    .widget {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+}
+
+/* Widget Filter */
+.ui-slider {
+    position: relative;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+    filter: inherit;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    width: 10px;
+    height: 10px;
+    background-color: $color-theme;
+    border-radius: 3px;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+}
+
+.widget-filter {
+    .ui-slider {
+        background-color: #dbdbdb;
+        border-radius: 0;
+        height: 4px;
+        margin-bottom: 18px;
+    }
+
+    .ui-slider-range {
+        height: 4px;
+        background-color: $color-theme;
+    }
+
+    .price-output {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        margin-bottom: 26px;
+    }
+
+    label {
+        color: $color-body;
+        font-size: 15px;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+
+    input {
+        background-color: transparent;
+        color: $color-theme;
+        font-size: 15px;
+        border: none;
+        max-width: 120px;
+    }
+
+    .btn {
+        height: auto;
+        line-height: 1;
+        padding: 0;
+
+        &:after,
+        &:before {
+            display: none;
+        }
+    }
+}

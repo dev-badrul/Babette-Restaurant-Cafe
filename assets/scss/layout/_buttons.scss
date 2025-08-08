@@ -1,0 +1,301 @@
+/*-----------------------
+    Buttons
+----------------------*/
+.btn {
+    font-family: $font-primary;
+    text-transform: capitalize;
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 170px;
+    height: 50px;
+    line-height: 48px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0 10px;
+    letter-spacing: 1.3px;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+}
+
+.btn:focus,
+.btn.active,
+.btn:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn__block {
+    width: 100%;
+}
+
+.btn__lg {
+    min-width: 210px;
+}
+
+.btn__primary {
+    background-color: $color-theme;
+    color: $color-white;
+    border: 2px solid $color-theme;
+}
+
+.btn__primary:active,
+.btn__primary:focus,
+.btn__primary:hover {
+    background-color: $color-heading;
+    color: $color-white;
+    border-color: $color-heading;
+}
+
+.btn__primary.btn__hover2:active,
+.btn__primary.btn__hover2:focus,
+.btn__primary.btn__hover2:hover {
+    background-color: $color-white;
+    color: $color-theme;
+    border-color: $color-white;
+}
+
+.btn__primary.btn__hover3:active,
+.btn__primary.btn__hover3:focus,
+.btn__primary.btn__hover3:hover {
+    background-color: transparent;
+    color: $color-theme;
+}
+
+.btn__secondary {
+    background-color: $color-dark;
+    color: $color-white;
+    border: 2px solid $color-dark;
+}
+
+.btn__secondary:active,
+.btn__secondary:focus,
+.btn__secondary:hover {
+    background-color: $color-theme;
+    color: $color-white;
+    border-color: $color-theme;
+}
+
+.btn__secondary.btn__hover2:active,
+.btn__secondary.btn__hover2:focus,
+.btn__secondary.btn__hover2:hover {
+    background-color: $color-white;
+    color: $color-dark;
+    border-color: $color-white;
+}
+
+.btn__white {
+    background-color: $color-white;
+    color: $color-heading;
+    border: 2px solid $color-white;
+}
+
+.btn__white:active,
+.btn__white:focus,
+.btn__white:hover {
+    background-color: $color-theme;
+    color: $color-white;
+    border-color: $color-theme;
+}
+
+.btn__white.btn__hover2:active,
+.btn__white.btn__hover2:focus,
+.btn__white.btn__hover2:hover {
+    background-color: $color-heading;
+    color: $color-white;
+    border-color: $color-heading;
+}
+
+.btn__rounded {
+    border-radius: 50px;
+}
+
+.btn__link {
+    background-color: transparent;
+    border-color: transparent;
+    min-width: 0;
+    line-height: 1;
+    height: auto;
+    padding: 0 0 4px 0;
+    border: none;
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+    }
+
+    &:before {
+        width: 0;
+        z-index: 2;
+        @include prefix(transition, all .6s linear, webkit moz ms o);
+    }
+
+    &:hover:before {
+        width: 100%;
+    }
+}
+
+.btn__link.btn__primary {
+    color: $color-theme;
+
+    &:after {
+        background-color: $color-theme;
+    }
+}
+
+.btn__link.btn__primary:active,
+.btn__link.btn__primary:focus,
+.btn__link.btn__primary:hover {
+    color: $color-dark;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:before {
+        background-color: $color-dark;
+    }
+}
+
+.btn__link.btn__secondary {
+    color: $color-dark;
+
+    &:after {
+        background-color: $color-dark;
+    }
+}
+
+.btn__link.btn__secondary:active,
+.btn__link.btn__secondary:focus,
+.btn__link.btn__secondary:hover {
+    color: $color-theme;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:before {
+        background-color: $color-theme;
+    }
+}
+
+.btn__bordered {
+    background-color: transparent;
+}
+
+.btn__bordered.btn__primary {
+    color: $color-theme;
+    border-color: $color-theme
+}
+
+.btn__bordered.btn__primary:active,
+.btn__bordered.btn__primary:focus,
+.btn__bordered.btn__primary:hover {
+    color: $color-white;
+    background-color: $color-theme;
+    border-color: $color-theme
+}
+
+.btn__bordered.btn__secondary {
+    color: $color-dark;
+    border-color: $color-dark
+}
+
+.btn__bordered.btn__secondary:active,
+.btn__bordered.btn__secondary:focus,
+.btn__bordered.btn__secondary:hover {
+    color: $color-white;
+    background-color: $color-dark;
+    border-color: $color-dark
+}
+
+.btn__bordered.btn__white {
+    color: $color-white;
+    border-color: $color-white
+}
+
+.btn__bordered.btn__white:active,
+.btn__bordered.btn__white:focus,
+.btn__bordered.btn__white:hover {
+    color: $color-theme;
+    background-color: $color-white;
+    border-color: $color-white
+}
+
+.btn__white.btn__secondary {
+    color: $color-dark;
+    border-color: $color-white;
+    background-color: $color-white;
+}
+
+.btn__white.btn__secondary:active,
+.btn__white.btn__secondary:focus,
+.btn__white.btn__secondary:hover {
+    color: $color-white;
+    background-color: $color-theme;
+    border-color: $color-theme;
+}
+
+.btn__video.popup-video {
+    padding-left: 50px;
+    color: $color-white;
+
+    .video__player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+
+        img {
+            width: auto;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
+
+.btn__video.popup-video:hover {
+    color: $color-dark;
+}
+
+.btn i {
+    margin-right: 9px;
+}
+
+.btn-custom {
+    position: relative;
+    font-family: $font-secondary;
+    font-size: 22px;
+    padding: 5px 10px;
+    background-color: $color-theme;
+    color: $color-white;
+    margin: auto;
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -11px;
+        width: 50%;
+        height: 30px;
+        background-color: $color-theme;
+        z-index: -1;
+    }
+
+    &:before {
+        right: 0;
+        transform: skewY(20deg);
+    }
+
+    &:after {
+        transform: skewY(-20deg);
+        left: 0;
+    }
+}

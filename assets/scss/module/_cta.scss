@@ -1,0 +1,53 @@
+/*-------------------------
+    Call To Action
+---------------------------*/
+.cta__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 11px;
+}
+
+.cta__desc {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.cta__actions {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+
+    .btn {
+        margin-left: 30px;
+    }
+}
+
+.cta__actions-text {
+    p {
+        font-size: 12px;
+    }
+
+    strong {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .cta-layout1 {
+        text-align: center;
+
+        .cta__actions {
+            display: block;
+            text-align: center;
+
+            .btn {
+                margin: 10px 0 0 0;
+            }
+        }
+
+        .cta__desc {
+            margin-bottom: 10px;
+        }
+    }
+}

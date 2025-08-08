@@ -1,0 +1,178 @@
+/*-------------------------
+    page title 
+-------------------------*/
+
+.header-transparent+.page-title {
+    margin-top: -100px;
+}
+
+.pagetitle__subheading {
+    font-family: $font-secondary;
+    font-size: 30px;
+    color: $color-gray;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pagetitle__heading {
+    font-size: 55px;
+    color: $color-white;
+    margin-bottom: 0;
+}
+
+.pagetitle__desc {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $color-white;
+    margin-bottom: 0;
+}
+
+.page-title {
+    padding-top: 400px;
+    padding-bottom: 90px;
+
+    .breadcrumb {
+        margin-top: 17px;
+        margin-bottom: 0;
+    }
+
+    .breadcrumb-item a {
+        color: $color-white;
+
+        &:hover {
+            color: $color-theme;
+        }
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $color-white;
+        font-family: FontAwesome;
+        content: "\f105";
+    }
+
+    .breadcrumb-item.active {
+        color: $color-theme;
+    }
+
+    .pagetitle__divider-shape {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        @include prefix(transform, translateX(-50%), webkit moz ms o);
+        fill: $color-theme;
+        z-index: 3;
+    }
+}
+
+.page-title-layout2 {
+    padding-top: 360px;
+
+    .pagetitle__subheading {
+        font-family: $font-primary;
+        font-size: 13px;
+        margin-bottom: 13px;
+    }
+}
+
+.page-title-layout3 {
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.page-title-layout4 {
+    padding-top: 300px;
+    padding-bottom: 165px;
+}
+
+.page-title-layout5 {
+    padding-top: 300px;
+    padding-bottom: 50px;
+
+    .breadcrumb {
+        margin-top: 130px;
+    }
+}
+
+.page-title-layout6 {
+    padding-top: 400px;
+    padding-bottom: 50px;
+
+    .breadcrumb {
+        margin-top: 17px;
+    }
+}
+
+.page-title-layout7 {
+    background-color: $color-gray;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .pagetitle__heading {
+        font-size: 19px;
+        color: $color-dark;
+    }
+
+    .breadcrumb-item a {
+        color: $color-dark;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $color-dark;
+    }
+
+    .breadcrumb {
+        margin-top: 0;
+    }
+}
+
+/* Medium Screens */
+@include md-screens {
+    .page-title {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .page-title-layout7 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-title {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .pagetitle__desc {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    .pagetitle__subheading {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .pagetitle__heading {
+        font-size: 32px;
+    }
+
+    .page-title .breadcrumb {
+        margin-top: 20px;
+    }
+
+    .page-title-layout7 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+
+        .breadcrumb {
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+        }
+    }
+}

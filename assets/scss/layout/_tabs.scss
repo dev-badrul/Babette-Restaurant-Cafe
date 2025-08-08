@@ -1,0 +1,57 @@
+/*--------------------
+    Tabs
+--------------------*/
+.nav-tabs {
+    border-bottom: 0;
+
+    .nav__link {
+        font-family: $font-secondary;
+        display: block;
+        padding-bottom: 3px;
+        margin-right: 30px;
+        font-size: 22px;
+        line-height: 1;
+        color: #333333;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0;
+            height: 2px;
+            background-color: $color-theme;
+            @include prefix(transition, all .4s linear, webkit moz ms o);
+        }
+
+        &.active,
+        &:hover {
+            color: $color-theme;
+
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.tab-content {
+    padding-top: 35px;
+}
+
+/* Mobile Phones and tablets */
+@include xs-screens {
+    .nav-tabs .nav__link {
+        margin-right: 15px;
+    }
+}

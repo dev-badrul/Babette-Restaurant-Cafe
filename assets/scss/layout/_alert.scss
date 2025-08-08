@@ -1,0 +1,32 @@
+/*-----------------------
+    Alerts
+-----------------------*/
+.alert-panel {
+    position: relative;
+    background-color: #f6f6f6;
+    padding: 30px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        height: 2px;
+        width: calc(100% - 60px);
+        background-color: $color-theme;
+    }
+}
+
+.alert__title {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+
+.alert__desc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+}

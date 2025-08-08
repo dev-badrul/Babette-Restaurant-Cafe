@@ -1,0 +1,21 @@
+/*----------------------- 
+    Clients
+-----------------------*/
+.clients {
+    .heading__title {
+        font-family: $font-secondary;
+        font-size: 24px;
+    }
+
+    .client {
+        position: relative;
+        text-align: center;
+        @include prefix(transition, .3s ease, webkit moz ms o);
+
+        img {
+            display: inline-block;
+            width: auto !important;
+            max-width: 100%;
+        }
+    }
+}

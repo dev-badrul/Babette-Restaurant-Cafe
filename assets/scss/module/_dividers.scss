@@ -1,0 +1,101 @@
+/*----------------------
+     Dividers 
+------------------------*/
+
+.divider__line {
+    position: relative;
+    height: 6px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(50% - 5px);
+        width: 20px;
+        height: 2px;
+        background-color: $color-heading;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        right: calc(50% - 5px);
+        width: 20px;
+        height: 2px;
+        background-color: $color-heading;
+    }
+}
+
+.divider__left:before {
+    left: 10px;
+}
+
+.divider__left:after {
+    right: calc(100% - 20px);
+}
+
+.divider__white {
+    &:before {
+        background-color: $color-white;
+    }
+
+    &:after {
+        background-color: $color-white;
+    }
+}
+
+.divider__theme {
+    &:before {
+        background-color: $color-theme;
+    }
+
+    &:after {
+        background-color: $color-theme;
+    }
+}
+
+.dotted__line {
+    position: relative;
+    width: 16px;
+    height: 3px;
+    display: inline-block;
+    line-height: 1;
+    @include prefix(transition, .3s ease, webkit moz ms o);
+
+    span {
+        width: 4px;
+        height: 3px;
+        background-color: #dedede;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 6px;
+            width: 4px;
+            height: 3px;
+            background-color: #dedede;
+            @include prefix(transition, .3s ease, webkit moz ms o);
+        }
+
+        &:after {
+            left: 12px;
+        }
+    }
+}
+
+.dotted__white span {
+    background-color: $color-white;
+
+    &:before,
+    &:after {
+        background-color: $color-white;
+    }
+}

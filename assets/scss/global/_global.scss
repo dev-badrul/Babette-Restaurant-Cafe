@@ -1,0 +1,146 @@
+/*---------------------------
+      Table of Contents
+    --------------------
+    
+    01- Global Styles
+    02- Helper Classes
+    03- Background & Colors
+    04- Typography
+    05- page title 
+    06- Buttons 
+    07- Forms
+    08- Tabs
+    09- Icons
+    10- Breadcrumb
+    11- Pagination
+    12- Lists
+    13- Alerts
+    14- Header & Navbar 
+    15- Accordions
+    16- Banners
+    17- Dividers
+    18- Footer
+    20- Carousel
+    21- Slider
+    22- Features
+    23- Fancybox
+    24- portfolio
+    25- Team
+    26- Testimonials
+    27- Call To Action
+    28- Clients
+    29- Blog
+    30- Contact
+    31- Shop
+    32- Sidebar
+    33- events
+    34- Menu
+    35- Reservation
+    36- Instagram Feed
+    
+----------------------------*/
+
+/*--------------------------
+      Global Styles
+---------------------------*/
+body {
+    background-color: $color-white;
+    font-family: $font-primary;
+    font-size: $body-font-size;
+    font-weight: 400;
+    color: $color-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: $color-theme;
+    color: $color-white;
+}
+
+a {
+    color: inherit;
+    @include transition(all .3s linear);
+
+    &:hover {
+        color: darken($color-theme, 0.20);
+        text-decoration: none;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+section {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*-------------------------
+     RESET Default Styles
+ --------------------------*/
+
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+*,
+:active,
+:focus {
+    outline: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+button,
+button:focus,
+.btn.focus,
+.btn:focus,
+.form-control,
+.form-control:focus {
+    outline: none;
+    background-color: transparent;
+    @include prefix(box-shadow, none, webkit moz ms o);
+}
+
+textarea {
+    resize: none
+}
+
+select {
+    background-color: transparent;
+}
+
+/* Mobile Phones */
+@media (max-width:992px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}

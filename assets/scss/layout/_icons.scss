@@ -1,0 +1,35 @@
+/*------------------- 
+    Icons
+------------------*/
+.social__icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+            line-height: 1;
+            font-size: 15px;
+            color: $color-heading;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+}
+
+.social__icons-white li a {
+    color: $color-white;
+}

@@ -1,0 +1,135 @@
+/*----------------------
+    Carousel
+-----------------------*/
+[data-nav="false"] .owl-nav.disabled {
+    display: none;
+}
+
+.owl-carousel {
+    .owl-item {
+        img {
+            width: 100%
+        }
+    }
+}
+
+.carousel-dots {
+    .owl-dots {
+        text-align: center;
+        margin-top: 30px;
+
+        .owl-dot {
+            margin: 3px;
+        }
+
+        .owl-dot span {
+            position: relative;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: #8f8f8f;
+            border: 4px solid #8f8f8f;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .owl-dot.active span {
+            width: 12px;
+            height: 12px;
+            background-color: transparent;
+            border-color: $color-heading;
+        }
+
+    }
+}
+
+.carousel-dots-light {
+    .owl-dots {
+        .owl-dot span {
+            background-color: $color-white;
+            border-color: $color-white;
+            opacity: .5;
+        }
+
+        .owl-dot.active span {
+            border-color: $color-white;
+            opacity: 1;
+        }
+    }
+}
+
+
+.carousel-arrows {
+
+    .owl-nav {
+
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: #999999;
+            font-size: 0;
+            font-weight: 400;
+            text-align: center;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 0;
+            border-radius: 0;
+            @include transition(all .3s ease);
+            transform: translateY(-50%);
+
+            &:hover {
+                color: $color-theme;
+                background-color: transparent;
+            }
+
+            &:after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                border: 2px solid $color-theme;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                opacity: 0;
+                @include transition(opacity .7s ease);
+            }
+
+            &:hover:after {
+                opacity: 1;
+            }
+        }
+
+        .owl-prev {
+            left: 0;
+
+            &:before {
+                font-family: FontAwesome;
+                content: "\f177";
+                font-size: 20px;
+            }
+        }
+
+        .owl-next {
+            right: 0;
+
+            &:before {
+                font-family: FontAwesome;
+                content: "\f178";
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        line-height: 1;
+    }
+}

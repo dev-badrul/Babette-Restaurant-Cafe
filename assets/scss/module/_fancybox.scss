@@ -1,0 +1,49 @@
+/*-----------------------
+     Fancybox 
+------------------------*/
+
+.fancybox-item {
+    position: relative;
+    margin-bottom: 60px;
+
+    .fancybox__icon {
+        @include prefix(transition, transform .3s ease, webkit moz ms o);
+        margin-bottom: 23px;
+    }
+
+    &:hover .fancybox__icon {
+        @include prefix(animation, slideTopDown .8s infinite alternate, webkit moz ms o);
+    }
+
+    &:hover .fancybox__title {
+        color: $color-theme;
+    }
+
+    .fancybox__title {
+        font-size: 20px;
+        margin-bottom: 24px;
+        @include prefix(transition, all .3s ease, webkit moz ms o);
+    }
+
+    .fancybox__desc {
+        padding: 0 10px;
+        margin-bottom: 0;
+    }
+}
+
+@include keyframes(slideTopDown) {
+    0% {
+        @include prefix(transform, translateY(0), webkit moz ms o);
+    }
+
+    100% {
+        @include prefix(transform, translateY(-6px), webkit moz ms o);
+    }
+}
+
+/* Mobile Phones */
+@include xs-screens {
+    .fancybox-item {
+        margin-bottom: 30px;
+    }
+}

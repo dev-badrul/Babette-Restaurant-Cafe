@@ -1,0 +1,56 @@
+/*----------------------
+        Forms
+----------------------*/
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    height: 50px;
+    line-height: 50px;
+    background-color: $color-white;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    padding: 0 15px;
+    font-size: 14px;
+    width: 100%;
+    color: $color-body;
+
+    &:focus {
+        background-color: $color-white;
+        border-color: $color-theme;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color-body;
+    }
+
+    &:-moz-placeholder {
+        color: $color-body;
+    }
+
+    &::-moz-placeholder {
+        color: $color-body;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color-body;
+    }
+}
+
+textarea.form-control {
+    min-height: 122px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.form-control.nice-select {
+    margin-bottom: 30px;
+}
+
+.nice-select .list {
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+}

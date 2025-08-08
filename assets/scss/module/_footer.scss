@@ -1,0 +1,146 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    position: relative;
+
+    .footer-inner {
+        overflow-x: hidden;
+    }
+
+    .footer__divider-shape {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        @include prefix(transform, translateX(-50%), webkit moz ms o);
+        fill: $color-theme;
+        z-index: 3;
+    }
+
+    .contact-box .contact__box-title {
+        color: $color-white;
+    }
+}
+
+.footer__logo-wrap {
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+        width: 100%;
+        height: 1px;
+        background-color: #2d2d2d;
+    }
+
+    &:before {
+        right: -webkit-calc(50% + 170px);
+        right: calc(50% + 170px);
+    }
+
+    &:after {
+        left: -webkit-calc(50% + 170px);
+        left: calc(50% + 170px);
+    }
+}
+
+.footer-top {
+    padding-top: 90px;
+}
+
+.footer-middle {
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.footer-bottom {
+    position: relative;
+    background-color: #1b1b1b;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .footer__divider-shape-bottom {
+        position: absolute;
+        top: -17px;
+        left: 50%;
+        @include prefix(transform, translateX(-50%), webkit moz ms o);
+        fill: #1b1b1b;
+        z-index: 3;
+    }
+}
+
+.footer-layout2 {
+
+    .footer__logo-wrap:before,
+    .footer__logo-wrap:after {
+        display: none;
+    }
+}
+
+@include xs-sm-screens {
+    .footer .contact-box {
+        margin-bottom: 0;
+
+        .contact__box-title {
+            margin: 10px;
+        }
+    }
+
+    .footer__logo-wrap {
+        img {
+            max-width: 200px;
+        }
+
+        &:before {
+            right: -webkit-calc(50% + 110px);
+            right: calc(50% + 110px);
+        }
+
+        &:after {
+            left: -webkit-calc(50% + 110px);
+            left: calc(50% + 110px);
+        }
+    }
+
+    .footer-top {
+        padding-top: 30px;
+    }
+
+    .footer-middle {
+        padding-bottom: 40px;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 20px;
+    border-radius: 3px;
+    color: $color-white;
+    background-color: $color-theme;
+    @include prefix(transform, translateY(30px), webkit moz ms o);
+    @include prefix(transition, all .5s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-heading;
+    }
+}
+
+#scrollTopBtn.actived {
+    opacity: 1;
+    @include prefix(transform, translateY(0), webkit moz ms o);
+}

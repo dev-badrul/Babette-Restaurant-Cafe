@@ -1,0 +1,246 @@
+/*------------------------
+    Slider 
+--------------------------*/
+
+.header-transparent+.slider {
+    margin-top: -100px;
+}
+
+.header-transparent+.slider .slide__content {
+    padding-top: 100px;
+}
+
+.slider {
+    padding: 0;
+
+    .slide-item {
+        height: 100vh;
+    }
+
+    .slide__subtitle {
+        display: block;
+        font-family: $font-secondary;
+        font-size: 25px;
+        color: $color-gray;
+        margin-bottom: 16px;
+    }
+
+    .slide__title {
+        font-size: 75px;
+        font-weight: 700;
+        color: $color-white;
+        margin-bottom: 20px;
+    }
+
+    .slide__desc {
+        font-size: 16px;
+        font-weight: 700;
+        color: $color-gray;
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    .carousel-arrows .owl-nav .owl-prev,
+    .carousel-arrows .owl-nav .owl-next {
+        border: 0;
+        color: $color-white;
+        border-radius: 50%;
+        line-height: 46px;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: border .3s linear, opacity .5s ease, transform .4s ease;
+    }
+
+
+    &:hover .carousel-arrows .owl-nav .owl-prev,
+    &:hover .carousel-arrows .owl-nav .owl-next {
+        transform: scale(1);
+        opacity: 1;
+
+        &:hover {
+            border-color: $color-theme;
+            color: $color-theme;
+        }
+    }
+
+    .carousel-arrows .owl-nav .owl-next:before,
+    .carousel-arrows .owl-nav .owl-prev:before {
+        font-family: icomoon;
+        font-size: 50px;
+        transition: .4s ease;
+    }
+
+    .carousel-arrows .owl-nav .owl-next:before {
+        content: "\e902";
+    }
+
+    .carousel-arrows .owl-nav .owl-prev:before {
+        content: "\e901";
+    }
+
+    .carousel-arrows .owl-nav .owl-prev {
+        left: 30px;
+    }
+
+    .carousel-arrows .owl-nav .owl-next {
+        right: 30px;
+    }
+
+    .carousel-arrows .owl-nav .owl-prev:after,
+    .carousel-arrows .owl-nav .owl-next:after {
+        display: none;
+    }
+
+    .carousel-arrows .owl-dots {
+        bottom: 30px;
+        text-align: center;
+    }
+}
+
+.slider-layout1 {
+    .slider__divider-shape {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        @include prefix(transform, translateX(-50%), webkit moz ms o);
+        fill: $color-theme;
+        z-index: 3;
+    }
+}
+
+.slider-layout2 {
+    .slide-item {
+        height: calc(100vh - 130px);
+    }
+
+    .divider-shape {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 17px;
+        background: url(../images/shapes/shape2.png) repeat-x;
+    }
+
+    .divider-shape-top {
+        top: 0;
+    }
+
+    .divider-shape-bottom {
+        bottom: 0;
+        @include prefix(transform, rotate(180deg), webkit moz ms o);
+    }
+}
+
+
+@media only screen and (min-width:992px) {
+    .slider .slide__title {
+        padding: 0 30px;
+    }
+}
+
+/* Large Size Devices */
+@include lg-screens {
+    .slider {
+        .carousel-arrows .owl-nav .owl-next {
+            right: 10px;
+        }
+
+        .carousel-arrows .owl-nav .owl-prev {
+            left: 10px;
+        }
+    }
+}
+
+/* Medium Size Devices */
+@include md-screens {
+    .slider {
+        .carousel-arrows .owl-nav .owl-next {
+            right: 0;
+        }
+
+        .carousel-arrows .owl-nav .owl-prev {
+            left: 0;
+        }
+
+        .slide__title {
+            font-size: 50px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .header-transparent+.slider {
+        margin-top: 0;
+    }
+
+    .header-transparent+.slider .slide__content {
+        padding-top: 0;
+    }
+
+    .slider {
+        .slide-item {
+            height: calc(100vh - 80px);
+        }
+
+        .slide__title {
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .slide__desc {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .carousel-arrows .owl-nav .owl-prev,
+        .carousel-arrows .owl-nav .owl-next {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .carousel-arrows .owl-nav .owl-prev {
+            left: 10px;
+        }
+
+        .carousel-arrows .owl-nav .owl-next {
+            right: 10px;
+        }
+
+        .carousel-arrows .owl-nav .owl-next:before,
+        .carousel-arrows .owl-nav .owl-prev:before {
+            font-size: 30px;
+        }
+    }
+}
+
+/* Mobile Phones */
+@include xs-screens {
+    .slider {
+        .slide__subtitle {
+            margin-bottom: 10px;
+        }
+
+        .slide__title {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            font-size: 12px;
+            font-weight: 600;
+            min-width: 120px;
+            height: 35px;
+            line-height: 33px;
+        }
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-prev,
+    .slider .carousel-arrows .owl-nav .owl-next {
+        display: none;
+    }
+}

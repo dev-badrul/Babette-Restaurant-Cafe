@@ -1,0 +1,76 @@
+/*-------------------
+    Lists
+-------------------*/
+.icon-list {
+    margin-bottom: 30px;
+
+    li {
+        position: relative;
+        padding-left: 25px;
+        color: #7f7f7f;
+        line-height: 30px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: ElegantIcons;
+            font-size: 15px;
+            color: $color-heading;
+        }
+    }
+}
+
+.icon-list.layout1 li:before {
+    content: "\49";
+}
+
+.icon-list.layout2 li:before {
+    content: "\52";
+}
+
+.icon-list.layout3 li:before {
+    content: "\35";
+}
+
+.icon-list.layout4 li:before {
+    content: "\e031";
+}
+
+.icon-list.layout5 li:before {
+    content: "\e03c";
+}
+
+.icon-list.layout6 li:before {
+    content: "\45";
+}
+
+.icon-list.layout7 li:before {
+    font-family: 'FontAwesome';
+    content: "\f111";
+    font-size: 7px;
+    left: 5px;
+}
+
+.icon-list.layout8 {
+    counter-reset: numbers;
+
+    li:before {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        counter-increment: numbers;
+        content: counter(numbers) ".";
+    }
+}
+
+.contact__list li {
+    font-size: 14px;
+    line-height: 24px;
+
+    i {
+        font-size: 16px;
+        margin-right: 9px;
+        color: $color-theme;
+    }
+}
